@@ -1,0 +1,1 @@
+json.array! @tcm_basic_contacts, partial: 'tcm_basic_contacts/tcm_basic_contact', as: :tcm_basic_contact

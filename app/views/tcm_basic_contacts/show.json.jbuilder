@@ -1,0 +1,1 @@
+json.partial! "tcm_basic_contacts/tcm_basic_contact", tcm_basic_contact: @tcm_basic_contact

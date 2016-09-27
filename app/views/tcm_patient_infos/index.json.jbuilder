@@ -1,0 +1,1 @@
+json.array! @tcm_patient_infos, partial: 'tcm_patient_infos/tcm_patient_info', as: :tcm_patient_info

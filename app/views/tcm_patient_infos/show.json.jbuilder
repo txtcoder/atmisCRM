@@ -1,0 +1,1 @@
+json.partial! "tcm_patient_infos/tcm_patient_info", tcm_patient_info: @tcm_patient_info

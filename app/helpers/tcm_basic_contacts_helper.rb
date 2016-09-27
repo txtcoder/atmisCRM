@@ -1,0 +1,2 @@
+module TcmBasicContactsHelper
+end

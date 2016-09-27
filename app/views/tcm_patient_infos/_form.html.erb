@@ -1,0 +1,17 @@
+<%= form_for(@tcm_patient_info) do |f| %>
+  <% if @tcm_patient_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tcm_patient_info.errors.count, "error") %> prohibited this tcm_patient_info from being saved:</h2>
+
+      <ul>
+      <% @tcm_patient_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
