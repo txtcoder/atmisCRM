@@ -169,8 +169,8 @@ class TcmPatientInfo
   field :current_stiff_hip, type:Boolean
   field :previous_pain_hip, type:Boolean
   field :previous_stiff_hip, type:Boolean
-  field :hip_left, types:Boolean
-  field :hip_right, types:Boolean
+  field :hip_left, type:Boolean
+  field :hip_right, type:Boolean
 
   field :current_pain_knee, type:Boolean
   field :current_stiff_knee, type:Boolean
