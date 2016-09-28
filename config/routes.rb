@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :contacts
   resources :test_contact_details
   resources :test_contact_basics
   resources :tcm_basic_contacts

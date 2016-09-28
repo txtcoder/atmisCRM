@@ -86,5 +86,4 @@ class ContactsController < ApplicationController
     def test_contact_params
       params.require(:contact).permit( :test_contact_basics => [:name], :test_contact_details => [:age])
     end
-    end
 end
