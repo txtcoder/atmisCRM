@@ -1,0 +1,1 @@
+json.array! @test_contact_basics, partial: 'test_contact_basics/test_contact_basic', as: :test_contact_basic

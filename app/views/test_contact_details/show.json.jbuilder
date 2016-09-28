@@ -1,0 +1,1 @@
+json.partial! "test_contact_details/test_contact_detail", test_contact_detail: @test_contact_detail

@@ -1,0 +1,1 @@
+json.partial! "test_contact_basics/test_contact_basic", test_contact_basic: @test_contact_basic
