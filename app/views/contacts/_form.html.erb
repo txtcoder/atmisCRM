@@ -10,14 +10,14 @@
       </ul>
     </div>
   <% end %>
-  <%= f.fields_for :test_contact_basics, @contact.test_contact_basics do |fi| %>
+  <%= f.fields_for :test_contact_basics  do |fi| %>
     <div class="field">
         <%= fi.label :name %>
         <%= fi.text_field :name %>
     </div>
   <% end %>
 
-  <%= f.fields_for :test_contact_details, @contact.test_contact_details do |fi| %>
+  <%= f.fields_for :test_contact_details do |fi| %>
      <div class="field">
         <%= fi.label :age %>
         <%= fi.number_field :age %>
