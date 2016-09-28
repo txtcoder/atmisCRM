@@ -26,7 +26,9 @@ class ContactsController < ApplicationController
   # POST /contacts
   # POST /contacts.json
   def create
-    @contact = Contact.new(test_contact_params)
+    @contact = Contact.new()
+    @contact.test_contact_details=TestContactDetail.new(test_contact_params[:test_contact_details])
+    @contact.test_contact_basics=TestContactBasic.new(test_contact_params[:test_contact_basics])
 
 
     ######
