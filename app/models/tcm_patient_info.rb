@@ -1,6 +1,6 @@
 class TcmPatientInfo
   include Mongoid::Document
-  belongs_to :contact
+  has_one :contact
   
 
   #Head/Neck

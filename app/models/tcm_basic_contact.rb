@@ -1,6 +1,6 @@
 class TcmBasicContact
   include Mongoid::Document
-  belongs_to :contact
+  has_one :contact
   field :name, type: String
   field :picture, type: String
   embeds_one :address, as: :addressable

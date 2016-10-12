@@ -17,6 +17,8 @@ class ContactsController < ApplicationController
     @contact = Contact.new
     @test_contact_basics=@contact.test_contact_basics
     @test_contact_details=@contact.test_contact_details
+    @tcm_basic_contact=@contact.tcm_basic_contact
+    @tcm_patient_info=@contact.tcm_patient_info
   end
 
   # GET /contacts/1/edit
@@ -27,19 +29,27 @@ class ContactsController < ApplicationController
   # POST /contacts.json
   def create
     @contact = Contact.new()
-    test_contact_details=TestContactDetail.new(test_contact_params[:test_contact_details])
-    test_contact_details.save
-    test_contact_basics=TestContactBasic.new(test_contact_params[:test_contact_basics])
-    test_contact_basics.save
-    @contact.test_contact_basics_id=test_contact_basics.id
-    @contact.test_contact_details_id=test_contact_details.id
+    #test_contact_details=TestContactDetail.new(test_contact_params[:test_contact_details])
+    #test_contact_details.save
+    #test_contact_basics=TestContactBasic.new(test_contact_params[:test_contact_basics])
+    # test_contact_basics.save
+    #@contact.test_contact_basics_id=test_contact_basics.id
+    #@contact.test_contact_details_id=test_contact_details.id
 
-
+    #do some check on which company it is
     ######
-      
+ 
     
     ######
-    #
+    #if it is tcm
+    tcm_basic_contact=TcmBasicContact.new(tcm_contact_params[:tcm_basic_contact])
+    tcm_basic_contact.save
+    tcm_patient_info=TcmPatientInfo.new(tcm_contact_params[:tcm_patient_info])
+    tcm_patient_info.save
+    @contact.tcm_basic_contact_id=tcm_basic_contact.id
+    @contact.tcm_patient_info_id=tcm_patient_info.id
+
+    #end tcm
     respond_to do |format|
       if @contact.save
         format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
@@ -88,6 +98,7 @@ class ContactsController < ApplicationController
     end
 
     def tcm_contact_params
+      params.require(:contact).permit!
     end
     
     def test_contact_params
