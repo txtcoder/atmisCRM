@@ -25,7 +25,7 @@ module AtmisCRM
     Mongoid.load!('./config/mongoid.yml')
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-        origin '*'
+        origins '*'
         resource '*', headers: :any, methods: [:get, :post, :delete, :put, :patch]
       end
     end
