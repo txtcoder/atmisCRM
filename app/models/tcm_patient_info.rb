@@ -158,33 +158,46 @@ class TcmPatientInfo
   field :previous_pain_low_back, type:Boolean
   field :previous_stiff_low_back, type:Boolean
 
-  field :current_pain_leg, type:Boolean
-  field :current_stiff_leg, type:Boolean
-  field :previous_pain_leg, type:Boolean
-  field :previous_stiff_leg, type:Boolean
-  field :leg_left, type:Boolean
-  field :leg_right, type:Boolean
+  field :current_pain_left_leg, type:Boolean
+  field :current_stiff_left_leg, type:Boolean
+  field :previous_pain_left_leg, type:Boolean
+  field :previous_stiff_left_leg, type:Boolean
+ 
+  field :current_pain_right_leg, type:Boolean
+  field :current_stiff_right_leg, type:Boolean
+  field :previous_pain_right_leg, type:Boolean
+  field :previous_stiff_right_leg, type:Boolean
+ 
+  field :current_pain_left_hip, type:Boolean
+  field :current_stiff_left_hip, type:Boolean
+  field :previous_pain_left_hip, type:Boolean
+  field :previous_stiff_left_hip, type:Boolean
 
-  field :current_pain_hip, type:Boolean
-  field :current_stiff_hip, type:Boolean
-  field :previous_pain_hip, type:Boolean
-  field :previous_stiff_hip, type:Boolean
-  field :hip_left, type:Boolean
-  field :hip_right, type:Boolean
+  field :current_pain_right_hip, type:Boolean
+  field :current_stiff_right_hip, type:Boolean
+  field :previous_pain_right_hip, type:Boolean
+  field :previous_stiff_right_hip, type:Boolean
 
-  field :current_pain_knee, type:Boolean
-  field :current_stiff_knee, type:Boolean
-  field :previous_pain_knee, type:Boolean
-  field :previous_stiff_knee, type:Boolean
-  field :knee_left, type:Boolean
-  field :knee_right, type:Boolean
+  field :current_pain_left_knee, type:Boolean
+  field :current_stiff_left_knee, type:Boolean
+  field :previous_pain_left_knee, type:Boolean
+  field :previous_stiff_left_knee, type:Boolean
 
-  field :current_pain_foot, type:Boolean
-  field :current_stiff_foot, type:Boolean
-  field :previous_pain_foot, type:Boolean
-  field :previous_stiff_foot, type:Boolean
-  field :foot_left, type:Boolean
-  field :foot_right, type:Boolean
+  field :current_pain_right_knee, type:Boolean
+  field :current_stiff_right_knee, type:Boolean
+  field :previous_pain_right_knee, type:Boolean
+  field :previous_stiff_right_knee, type:Boolean
+
+
+  field :current_pain_left_foot, type:Boolean
+  field :current_stiff_left_foot, type:Boolean
+  field :previous_pain_left_foot, type:Boolean
+  field :previous_stiff_left_foot, type:Boolean
+
+  field :current_pain_right_foot, type:Boolean
+  field :current_stiff_right_foot, type:Boolean
+  field :previous_pain_right_foot, type:Boolean
+  field :previous_stiff_right_foot, type:Boolean
 
   #surgery
   field :surgery_type, type:String
