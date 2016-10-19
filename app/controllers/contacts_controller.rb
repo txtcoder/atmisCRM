@@ -5,11 +5,16 @@ class ContactsController < ApplicationController
   # GET /contacts.json
   def index
     @contacts = Contact.all
+
+    format.json { render json: @contacts.to_json(:include => [:tcm_basic_contact, :tcm_patient_info])}
   end
 
   # GET /contacts/1
   # GET /contacts/1.json
   def show
+    
+   format.json { render json: @contact.to_json(:include => [:tcm_basic_contact, :tcm_patient_info])}
+
   end
 
   # GET /contacts/new
