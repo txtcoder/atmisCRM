@@ -70,8 +70,8 @@ class ContactsController < ApplicationController
   # PATCH/PUT /contacts/1
   # PATCH/PUT /contacts/1.json
   def update
-    @tcm_basic_contact.update(tcm_contact_params[:tcm_basic_contact])
-    @tcm_patient_info.update(tcm_contact_params[:tcm_patient_info])
+    @tcm_basic_contact.update_attributes!(tcm_contact_params[:tcm_basic_contact])
+    @tcm_patient_info.update_attributes!(tcm_contact_params[:tcm_patient_info])
     respond_to do |format|
       if @contact.update(test_contact_params)
         format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
