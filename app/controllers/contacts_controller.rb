@@ -70,10 +70,14 @@ class ContactsController < ApplicationController
   # PATCH/PUT /contacts/1
   # PATCH/PUT /contacts/1.json
   def update
-    @tcm_basic_contact.update_attributes!(tcm_contact_params[:tcm_basic_contact])
+    if @tcm_basic_contact.update_attributes!(tcm_contact_params[:tcm_basic_contact])
+    else
+        puts "failed"
+        puts @tm_basic_contact.errors.inspect
+    end
     @tcm_patient_info.update_attributes!(tcm_contact_params[:tcm_patient_info])
     respond_to do |format|
-      if @contact.update(test_contact_params)
+      if @contact.update(tcm_contact_params)
         format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
         format.json { render :show, status: :ok, location: @contact }
       else
