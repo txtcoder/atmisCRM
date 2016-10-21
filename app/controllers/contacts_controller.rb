@@ -72,7 +72,7 @@ class ContactsController < ApplicationController
   def update
     if @tcm_basic_contact.update_attributes!(tcm_contact_params[:tcm_basic_contact])
        puts "worked"
-       @tcm_basic_contact.save
+       puts tcm_contact_params[:tcm_basic_contact]
     else
         puts "failed"
         puts @tm_basic_contact.errors.inspect
