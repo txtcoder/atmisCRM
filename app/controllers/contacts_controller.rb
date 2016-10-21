@@ -71,7 +71,7 @@ class ContactsController < ApplicationController
   # PATCH/PUT /contacts/1.json
   def update
        puts params[:tcm_basic_contact]
-    if @tcm_basic_contact.update_attributes!(params[:tcm_basic_contact].permit!(:name, :picture, :address, :birth_date, :postal_code, :city, :province, :home_phone, :cell_phone, :work_phone, :preferred_contact, :referral, :email, :weight, :height, :occupation))
+    if @tcm_basic_contact.update_attributes!(params.require:tcm_basic_contact.permit(:name, :picture, :address, :birth_date, :postal_code, :city, :province, :home_phone, :cell_phone, :work_phone, :preferred_contact, :referral, :email, :weight, :height, :occupation))
        puts "worked"
        puts tcm_contact_params[:tcm_basic_contact]
     else
