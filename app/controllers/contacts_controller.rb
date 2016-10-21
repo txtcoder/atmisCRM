@@ -70,6 +70,7 @@ class ContactsController < ApplicationController
   # PATCH/PUT /contacts/1
   # PATCH/PUT /contacts/1.json
   def update
+       puts params[:tcm_basic_contact]
     if @tcm_basic_contact.update_attributes!(params[:tcm_basic_contact])
        puts "worked"
        puts tcm_contact_params[:tcm_basic_contact]
