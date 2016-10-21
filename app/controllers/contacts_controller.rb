@@ -97,6 +97,9 @@ class ContactsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_contact
       @contact = Contact.find(params[:id])
+      console.log(params[:id])
+      console.log("ZZZ")
+      console.log(@contact.tcm_basic_contact_id)
       @tcm_basic_contact = TcmBasicContact.find(@contact.tcm_basic_contact_id)
       @tcm_patient_info= TcmPatientInfo.find(@contact.tcm_patient_info_id)
     end
